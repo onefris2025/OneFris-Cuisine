@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneFris Cuisine</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>OneFris Cuisine</h1>
+        <p>Authentic street flavors. Fresh. Affordable. Unforgettable.</p>
+        <div class="hero-buttons">
+            <a href="#menu" class="btn">View Menu</a>
+            <a href="#order" class="btn dark">Order Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About OneFris</h2>
+    <p>
+        OneFris Cuisine offers high-quality, affordable fried chips and chicken,
+        prepared fresh every day with authentic local flavors.
+    </p>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+    <h2>Our Popular Menu</h2>
+
+    <div class="menu-grid">
+        <div class="menu-card">
+            <img src="images/chicken.jpg" alt="Grilled Chicken Fries">
+            <h3>Grilled Chicken Fries</h3>
+            <p>Perfectly seasoned chicken served with crispy fried chips.</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/egg.jpg" alt="Chips with an Egg">
+            <h3>Chips with an Egg</h3>
+            <p>Golden chips topped with a fried egg and a cold coke.</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/chapatti.jpg" alt="Chapatti Crumbs">
+            <h3>Chapatti Crumbs</h3>
+            <p>A picnic isn’t complete without warm chapatti crumbs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ORDER -->
+<section class="order" id="order">
+    <h2>Place Your Order</h2>
+
+    <form action="mailto:onefriscuisine@gmail.com" method="post" enctype="text/plain">
+
+        <label>Name</label>
+        <input type="text" name="Customer Name" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="Phone" required>
+
+        <label>Select Your Order</label>
+        <select name="Order Item" required>
+            <option value="">-- Choose an item --</option>
+            <option>Grilled Chicken Fries</option>
+            <option>Chips with an Egg</option>
+            <option>Chapatti Crumbs</option>
+        </select>
+
+        <label>Quantity</label>
+        <input type="number" name="Quantity" min="1" value="1">
+
+        <label>Additional Notes</label>
+        <textarea name="Notes" placeholder="Extra spice, takeaway, etc."></textarea>
+
+        <button type="submit" class="btn">Send Order</button>
+    </form>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Hungry Yet?</h2>
+    <p>Great food is just one order away.</p>
+    <a href="#order" class="btn dark">Order Now</a>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2>Find Us</h2>
+
+    <div class="contact-info">
+        <p>📍 Zomba, along Chirunga Road</p>
+        <p>📞 <a href="tel:0991195424">0991 195 424</a></p>
+        <p>📧 <a href="mailto:onefriscuisine@gmail.com">onefriscuisine@gmail.com</a></p>
+        <p>📘 <a href="https://facebook.com/onefriscuisine" target="_blank">@onefriscuisine</a></p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 OneFris Cuisine. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
