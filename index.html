@@ -2,126 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OneFris Cuisine</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
+<div class="site-frame">
+
+    <!-- HEADER -->
+    <header class="hero reveal">
         <h1>OneFris Cuisine</h1>
-        <p>Authentic street flavors. Fresh. Affordable. Unforgettable.</p>
-        <div class="hero-buttons">
-            <a href="#menu" class="btn">View Menu</a>
-            <a href="#order" class="btn dark">Order Now</a>
+        <p>Authentic taste • Fresh meals • Fast service</p>
+        <a href="#order" class="btn-primary">Order Now</a>
+    </header>
+
+   
+
+    <!-- MENU -->
+    <section class="menu reveal" id="menu">
+        <h2>Our Menu</h2>
+
+        <div class="menu-grid">
+            <div class="menu-card reveal-up">
+                <img src="images/egg.jpg" alt="Chips and Egg">
+                <h3>Chips & Egg</h3>
+                <p>MK 3,500</p>
+            </div>
+
+            <div class="menu-card reveal-up">
+                <img src="images/chicken.jpg" alt="Chips and Chicken">
+                <h3>Chips & Chicken</h3>
+                <p>MK 3,700</p>
+            </div>
+
+            <div class="menu-card reveal-up">
+                <img src="images/chapati.jpg" alt="Chapati">
+                <h3>Chapatti crumbs</h3>
+                <p>MK 1,000</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ABOUT -->
-<section class="about">
-    <h2>About OneFris</h2>
-    <p>
-        OneFris Cuisine offers high-quality, affordable fried chips and chicken,
-        prepared fresh every day with authentic local flavors.
-    </p>
-</section>
+    <!-- ORDER -->
+    <section class="order reveal" id="order">
+        <h2>Place an Order</h2>
 
-<!-- MENU -->
-<section class="menu" id="menu">
-    <h2>Our Popular Menu</h2>
+        <div class="order-buttons">
+            <a href="https://wa.me/265991195424" class="btn-secondary">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </a>
 
-    <div class="menu-grid">
-        <div class="menu-card">
-            <img src="images/chicken.jpg" alt="Grilled Chicken Fries">
-            <h3>Grilled Chicken Fries</h3>
-            <p>Perfectly seasoned chicken served with crispy fried chips.</p>
+            <a href="https://forms.gle/NLgnNXiTJeSPdpMz5" class="btn-secondary">
+                <i class="fa-solid fa-clipboard"></i> Order via Google Form
+            </a>
         </div>
+    </section>
 
-        <div class="menu-card">
-            <img src="images/egg.jpg" alt="Chips with an Egg">
-            <h3>Chips with an Egg</h3>
-            <p>Golden chips topped with a fried egg and a cold coke.</p>
+    <!-- CONTACT -->
+    <section class="contact reveal">
+        <h2>Contact Us</h2>
+
+        <div class="contact-grid">
+<div class="contact-item reveal-up">
+    <a href="https://www.google.com/maps/search/?api=1&query=Zomba+Chirunga+Road" target="_blank">
+        <i class="fa-solid fa-location-dot"></i>
+        <h4>Location</h4>
+        <p>Zomba, Chirunga Road</p>
+    </a>
+</div>
+
+<div class="contact-item reveal-up">
+    <a href="tel:+265991195424">
+        <i class="fa-solid fa-phone"></i>
+        <h4>Phone</h4>
+        <p>+265 991 195 424</p>
+    </a>
+</div>
+
+<div class="contact-item reveal-up">
+    <a href="mailto:onefriscuisine2026@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <h4>Email</h4>
+        <p>onefriscuisine2026@gmail.com</p>
+    </a>
+</div>
+
         </div>
+    </section>
 
-        <div class="menu-card">
-            <img src="images/chapati.jpg" alt="Chapati Crumbs">
-            <h3>Chapatti Crumbs</h3>
-            <p>A picnic isn’t complete without warm chapatti crumbs.</p>
-        </div>
-    </div>
-</section>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 OneFris Cuisine • All Rights Reserved</p>
+    </footer>
 
-<!-- ORDER -->
-<section class="order" id="order">
-    <h2>Place Your Order</h2>
+</div>
 
-    <form action="mailto:onefriscuisine@gmail.com" method="post" enctype="text/plain">
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const elements = document.querySelectorAll('.reveal, .reveal-up');
 
-        <label>Name</label>
-        <input type="text" name="Customer Name" required>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.5 });
 
-        <label>Phone Number</label>
-        <input type="tel" name="Phone" required>
-
-        <label>Select Your Order</label>
-        <select name="Order Item" required>
-            <option value="">-- Choose an item --</option>
-            <option>Fried Chicken</option>
-            <option>Chips with an fried Egg</option>
-            <option>Chapatti Crumbs</option>
-        </select>
-
-        <label>Quantity</label>
-        <input type="number" name="Quantity" min="1" value="1">
-
-        <label>Additional Notes</label>
-        <textarea name="Notes" placeholder="Extra spice, takeaway, etc."></textarea>
-
-        <button type="submit" class="btn">Send Order</button>
-    </form>
-</section>
-
-<title>OneFris Cuisine | Best Restaurant in Zomba, Malawi</title>
-
-<meta name="description" content="OneFris Cuisine is a restaurant in Zomba along Chirunga Road offering delicious local and continental meals. Call 0991195424.">
-
-<meta name="keywords" content="OneFris Cuisine, restaurant in Zomba, Zomba restaurants, food in Zomba, Chirunga Road restaurant">
-
-<meta name="author" content="OneFris Cuisine">
-
-<meta name="robots" content="index, follow">
-
-<!-- CTA -->
-<section class="cta">
-    <h2>Hungry Yet?</h2>
-    <p>Great food is just one order away.</p>
-    <a href="#order" class="btn dark">Order Now</a>
-</section>
-
-<!-- CONTACT -->
-<section class="contact">
-    <h2>Find Us</h2>
-
-    <div class="contact-info">
-        <p>📍 Zomba, along Chirunga Road</p>
-        <p>📞 <a href="tel:0991195424">0991 195 424</a></p>
-        <p>📧 <a href="mailto:onefriscuisine@gmail.com">onefriscuisine@gmail.com</a></p>
-        <p>📘 <a href="https://facebook.com/onefriscuisine" target="_blank">@onefriscuisine</a></p>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 OneFris Cuisine. All Rights Reserved.</p>
-</footer>
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
